@@ -5,9 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+export const Context = React.createContext();
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Context.Provider value={{hello:"world"}}>
+      <App />
+      </Context.Provider>
   </React.StrictMode>
 );
 
